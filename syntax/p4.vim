@@ -3,16 +3,16 @@
 " Maintainer: Antonin Bas, Barefoot Networks Inc
 " Latest Revision: 5 August 2014
 
-if version < 600
+if v:version < 600
   syntax clear
-elseif exists("b:current_syntax")
+elseif exists('b:current_syntax')
   finish
 endif
 
 " Use case sensitive matching of keywords
 syn case match
 
-syn keyword p4ObjectKeyword parser table action 
+syn keyword p4ObjectKeyword parser table action
 syn keyword p4ObjectKeyword header_type header action metadata
 syn keyword p4ObjectKeyword field_list field_list_calculation calculated_field
 syn keyword p4ObjectKeyword control
@@ -88,4 +88,4 @@ HiLink p4Statement		   Statement
 HiLink p4Constants		   Constant
 HiLink p4Primitives		   Function
 
-let b:current_syntax = "p4"
+let b:current_syntax = 'p4'
