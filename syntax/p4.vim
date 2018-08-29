@@ -41,7 +41,7 @@ syntax region p4BlockComment  start="/\*"  end="\*/" contains=p4TODO,@Spell
 
 syntax match p4Preprocessor   "#.*$"
 
-" Integers
+" Number
 syntax match p4DecimalInt "\<\d\+\([Ee]\d\+\)\?\>"
 syntax match p4HexadecimalInt "\<0x\x\+\>"
 
@@ -78,8 +78,8 @@ highlight def link p4Preprocessor		   Macro
 highlight def link p4ObjectAttributeKeyword	   Keyword
 highlight def link p4MatchTypeKeyword	   Keyword
 highlight def link p4CounterTypeKeyword	   Keyword
-highlight def link p4DecimalInt		   Integer
-highlight def link p4HexadecimalInt		   Integer
+highlight def link p4DecimalInt		   Number
+highlight def link p4HexadecimalInt		   Number
 highlight def link p4Builtin		   Function
 highlight def link p4Conditional		   Conditional
 highlight def link p4Statement		   Statement
