@@ -71,19 +71,19 @@ syntax keyword p4Constants P4_PARSING_DONE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Apply highlight groups to syntax groups defined above
 
-highlight def link p4ObjectKeyword             Type
-highlight def link p4Comment		   Comment
-highlight def link p4BlockComment		   Comment
-highlight def link p4Preprocessor		   Macro
-highlight def link p4ObjectAttributeKeyword	   Keyword
-highlight def link p4MatchTypeKeyword	   Keyword
-highlight def link p4CounterTypeKeyword	   Keyword
-highlight def link p4DecimalInt		   Number
-highlight def link p4HexadecimalInt		   Number
-highlight def link p4Builtin		   Function
-highlight def link p4Conditional		   Conditional
-highlight def link p4Statement		   Statement
-highlight def link p4Constants		   Constant
-highlight def link p4Primitives		   Function
+highlight def link p4ObjectKeyword Type
+highlight def link p4Comment Comment
+highlight def link p4BlockComment Comment
+highlight def link p4Preprocessor Macro
+highlight def link p4ObjectAttributeKeyword Keyword
+highlight def link p4MatchTypeKeyword Keyword
+highlight def link p4CounterTypeKeyword Keyword
+highlight def link p4DecimalInt Number
+highlight def link p4HexadecimalInt Number
+highlight def link p4Builtin Function
+highlight def link p4Conditional Conditional
+highlight def link p4Statement Statement
+highlight def link p4Constants Constant
+highlight def link p4Primitives Function
 
 let b:current_syntax = 'p4'
