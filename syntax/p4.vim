@@ -35,9 +35,9 @@ syntax keyword p4MatchTypeKeyword exact ternary lpm range valid
 
 syntax keyword p4CounterTypeKeyword bytes packets
 
-syntax keyword p4TODO contained FIXME TODO
-syntax match p4Comment  "//.*$"  contains=p4TODO,@Spell
-syntax region p4BlockComment  start="/\*"  end="\*/" contains=p4TODO,@Spell
+syntax keyword p4Todo contained FIXME TODO
+syntax match p4Comment  "//.*$"  contains=p4Todo,@Spell
+syntax region p4BlockComment  start="/\*"  end="\*/" contains=p4Todo,@Spell
 
 syntax match p4Preprocessor   "#.*$"
 
@@ -85,5 +85,6 @@ highlight def link p4Conditional Conditional
 highlight def link p4Statement Statement
 highlight def link p4Constants Constant
 highlight def link p4Primitives Function
+highlight def link p4Todo Todo
 
 let b:current_syntax = 'p4'
