@@ -12,34 +12,32 @@ endif
 " Use case sensitive matching of keywords
 syntax case match
 
-syntax keyword p4ObjectKeyword parser table action
-syntax keyword p4ObjectKeyword header_type header action metadata
-syntax keyword p4ObjectKeyword field_list field_list_calculation calculated_field
-syntax keyword p4ObjectKeyword control
-syntax keyword p4ObjectKeyword parser_value_set
-syntax keyword p4ObjectKeyword counter meter
+syntax keyword p4ObjectKeyword action calculated_field control counter
+syntax keyword p4ObjectKeyword field_list field_list_calculation header
+syntax keyword p4ObjectKeyword header_type metadata meter parser
+syntax keyword p4ObjectKeyword parser_value_set table
 
 " Tables
-syntax keyword p4ObjectAttributeKeyword reads actions min_size max_size size
+syntax keyword p4ObjectAttributeKeyword actions min_size max_size reads size
 " Header types
 syntax keyword p4ObjectAttributeKeyword fields length max_length
 " Field list calculation
-syntax keyword p4ObjectAttributeKeyword input algorithm output_width
+syntax keyword p4ObjectAttributeKeyword algorithm input output_width
 " Calculated fields
-syntax keyword p4ObjectAttributeKeyword verify update
+syntax keyword p4ObjectAttributeKeyword update verify
 " Counters and meters
-syntax keyword p4ObjectAttributeKeyword type direct static
+syntax keyword p4ObjectAttributeKeyword direct static type
 syntax keyword p4ObjectAttributeKeyword instance_count min_width saturating
 
-syntax keyword p4MatchTypeKeyword exact ternary lpm range valid
+syntax keyword p4MatchTypeKeyword exact lpm range ternary valid
 
 syntax keyword p4CounterTypeKeyword bytes packets
 
 syntax keyword p4Todo contained FIXME TODO
-syntax match p4Comment  "//.*$"  contains=p4Todo,@Spell
-syntax region p4BlockComment  start="/\*"  end="\*/" contains=p4Todo,@Spell
+syntax region p4Comment start="//" end="$" contains=p4Todo,@Spell
+syntax region p4BlockComment start="/\*" end="\*/" contains=p4Todo,@Spell
 
-syntax match p4Preprocessor   "#.*$"
+syntax match p4Preprocessor   "#.*"
 
 " Number
 syntax match p4DecimalInt "\<\d\+\([Ee]\d\+\)\?\>"
